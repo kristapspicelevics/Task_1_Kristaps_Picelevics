@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specifc Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Stylessheets -->
+	<link rel="stylesheet" href="assets/css/styles.css" />
+    <link href='assets/font/OpenSans/OpenSans.css' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body>
+	
+	<!-- JavaScript -->
+	<script src="assets/js/theme.js"></script>
+    <div class = ”container-fluid”>
+        <!-- Site navigation menu -->
+        
+        <img src="assets/img/Sparkle Video 1.png" class = "videoPic">
+        <img src="assets/img/Union.png" class = "header">
+        <img src="assets/img/BlackLogo 3.png" class = "logo3">
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a class = "idea" href="index.html">Ideja</a>
+                <a class = "dream" href="index.html">Piesaki Sapni</a>
+                <a class = "uznemeji" href="index.html">Uzņēmējiem</a>
+                <a class = "bank" href="index.html">Sapņu banka</a>
+                <a class = "support" href="index.html">Sapņus atbalsta</a>
+                <a class = "inspire" href="index.html">99 Iedvesmas stāsti </a>
+                <a class = "lv" href="index.html">LV</a>
+            </div>
+        
+        </div>
+        <span onclick="openNav()" class = "list">Menu</span>
+      
+        <!-- Play -->
+        <img src="assets/img/White.png" class = "whitePart">
+        <img src="assets/img/Orange.png" class = "orangePart">
+
+        
+        <div class = "txtAbout">
+            <p>
+                SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. 
+                Šeit satiekas sapņotāji un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem.Mēs esam gatavi 
+                palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
+            </p>
+        </div>
+        
+        <img src="assets/img/Zanda_1.png" class = "imgZanda">
+        <img src="assets/img/Sibilla_4.png" class = "imgSibilla">
+        <img src="assets/img/Brinuma_meita-15.png" class = "imgBrinuma">
+        <img src="assets/img/Alina_1 1.png" class = "imgAlina11">
+        <img src="assets/img/Anda_2 1.png" class = "imgAnda_21">
+        <img src="assets/img/ripped 6.png" class = "imgRipped67">
+        <img src="assets/img/ripped 6.png" class = "imgRipped68">
+
+        <div class = "txtPiepildit">
+            <p>
+                VĒLIES PIEPILDĪT SAVU SAPNI?
+            </p>
+        </div>
+        <div class = "txtPalidzet">
+            <p>
+                VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI?
+            </p>
+        </div>
+        <button type="button" class = "buttonDream">Sapņotājiem</button>
+        <button type="button" class = "buttonEntrepreneurs">Uzņēmējiem</button>
+        <div class = "txtSazinaties">
+            <p>
+                SAZINĀTIES AR MUMS
+            </p>
+        </div>
+
+        <div class = "txtMandatory">
+            <p>
+                * obligāti aizpildāmie lauki
+            </p>
+        </div>
+
+        <div>
+            <form action="/index.html" method="get">
+                <input type="text" name="name" class = "formName" value="Vārds, Uzvārds*">
+                <input type="text" name="email" class = "formPhone" value="Telefons*">
+                <input type="text" name="phone" class = "formEmail" value="E-pasts*">
+                <input type="text" name="question" class = "formJaut" value="Jautājums, vai komentārs*">
+                <label>
+                    <span class="checkboxAgree"></span>
+                </label>
+
+                <label for="agreement" class = "txtAgree">
+                    Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā 
+                    un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
+                <input type="submit" class = "buttonSend" value="Sūtīt">
+            </form>
+        </div>
+
+        <div class = "footer">
+            <img src="assets/img/GoldenV2Logo 3.png" class = "goldenLogo">  
+            <a class = "footerIdea" href="index.html">Ideja</a>
+            <a class = "footerDream" href="index.html">Piesaki Sapni</a>
+            <a class = "footerEntrepreneurs" href="index.html">Uzņēmējiem</a>
+            <a class = "footerDreamBank" href="index.html">Sapņu banka</a>
+            <a class = "footerDreamSup" href="index.html">Sapņus atbalsta</a>
+            <a class = "footerInspire" href="index.html">Iedvesmas stāsti </a>
+            <p class = "footerCommunity">Biedrība SparkleHeart</p>
+            <p class = "footerRegister">Reģistrācijas nr. 40008293119</p>
+            <p class = "footerBankNum">LV52HABA0551047652465</p>
+            <p class = "footerBank">Banka: SWEDBANK A/S</p>
+            <p class = "footerName">Juris Gogulis</p>
+            <p class = "footerEmail">juris.gogulis@sparkleheart.org</p>
+            <p class = "footerPhone">+37126890034</p>
+            <p class = "footerAddress">Biķernieku iela 24a - 5, LV-1006</p>
+            <p class = "footerPrivacy">Privātuma politika</p>
+            <p class = "footerCopyright">© SparkleHeart 2020. Visas tiesības aizsargātas.</p>
+            <img src="assets/img/Facebook.png" class = "facebook">
+            <img src="assets/img/Instagram.png" class = "instagram">
+        </div>
+
+        
+        <img src="assets/img/Subtract.png" class = "suppGroup">
+
+        <div class = "txtSupporters">
+            <p>
+                ATBALSTĪTĀJI
+            </p>
+        </div>
+        <img src="assets/img/getlogo 1.png" class = "getlogo">
+        <img src="assets/img/sem_logo-2 1.png" class = "sem">
+        <img src="assets/img/Citybee-logo 1.png" class = "citybee">
+        <img src="assets/img/logo1 1.png" class = "logo1">
+     </div>
+
+</body>
+</html>

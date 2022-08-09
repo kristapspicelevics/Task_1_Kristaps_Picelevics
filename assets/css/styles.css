@@ -1,0 +1,942 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 1 1000;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: 1 1000;
+}
+/* The Overlay (background) */
+@media(max-width:767px){
+  .overlay{
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+ }
+  .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+ }
+  .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+ }
+  .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+ }
+  .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+ }
+  @media screen and (max-height: 450px) {
+      .overlay a {
+         font-size: 20px
+     }
+      .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+     }
+ }
+  .list{
+      position: absolute;
+      width: 29px;
+      height: 29px;
+      left: 1175px;
+      top: 41px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 22px;
+ }
+}
+@media(min-width:768px){
+ /* Menu */
+  .menu {
+      position: absolute;
+      width: 1242px;
+      height: 146px;
+      left: 62px;
+      top: -50px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+ }
+ /* Menu */
+  .submenu {
+      position: absolute;
+      width: 999px;
+      height: 45px;
+      left: 305px;
+      top: 51px;
+ }
+ /* Ideja */
+  .idea {
+      position: absolute;
+      width: 46px;
+      height: 24px;
+      left: 305px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* Piesaki Sapni */
+  .dream {
+      position: absolute;
+      width: 130px;
+      height: 24px;
+      left: 386px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* Uzņēmējiem */
+  .uznemeji {
+      position: absolute;
+      width: 120px;
+      height: 24px;
+      left: 543px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* Sapņu banka */
+  .bank{
+      position: absolute;
+      width: 123px;
+      height: 45px;
+      left: 698px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* Sapņus atbalsta */
+  .support{
+      position: absolute;
+      width: 153px;
+      height: 45px;
+      left: 856px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* 99 Iedvesmas stāsti */
+  .inspire{
+      position: absolute;
+      width: 188px;
+      height: 29px;
+      left: 1036px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+ /* LV */
+  .lv{
+      position: absolute;
+      width: 29px;
+      height: 29px;
+      left: 1275px;
+      top: 51px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.005em;
+      color: #060606;
+ }
+}
+@media(max-width:1366px){
+  body {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+ }
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  background: #FFFFFF;
+}
+.anchor {
+  display: block;
+  position: relative;
+  top: -30vh;
+  visibility: hidden;
+}
+/* Sparkle Video 1 */
+.videoPic{
+  position: absolute;
+  width: 1366px;
+  height: 722px;
+  left: 0px;
+  top: 47px;
+}
+.logo3{
+  position: absolute;
+  width: 159px;
+  height: 96px;
+  left: 62px;
+  top: 0px;
+}
+/* Ellipse 5 */
+.whitePart{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 643px;
+  top: 368px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+}
+/* Vector */
+.orangePart{
+  position: absolute;
+  width: 86px;
+  height: 83px;
+  left: 640px;
+  top: 366px;
+}
+/* Union */
+.header{
+  position: absolute;
+  width: 1367px;
+  height: 120px;
+  left: -1px;
+  top: 7px;
+}
+/* BlackLogo 2 */
+.logo2{
+  position: absolute;
+  width: 159px;
+  height: 146px;
+  left: 62px;
+  top: 0px;
+}
+/* Poga Pieteikt Sapni */
+.buttonDream{
+  position: absolute;
+  width: 233px;
+  height: 50px;
+  left: 300px;
+  top: 1810px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.0em;
+  background: url("../img/Dream.png");
+  color: #FFFFFF;
+}
+/* Poga Pieteikt Sapni */
+.buttonEntrepreneurs{
+  position: absolute;
+  width: 233px;
+  height: 50px;
+  left: 832px;
+  top: 1810px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.0em;
+  background: url("../img/Ente.png");
+  color: #FFFFFF;
+}
+/* VĒLIES PIEPILDĪT SAVU SAPNI? */
+.txtPiepildit{
+  position: absolute;
+  width: 394px;
+  height: 32px;
+  left: 220px;
+  top: 1731px;
+  font-family: 'Oswald';
+  font-style: bold;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* VĒLIES PALĪDZĒT KĀDĀM PIEPILDĪT SAPNI? */
+.txtPalidzet{
+  position: absolute;
+  width: 500px;
+  height: 32px;
+  left: 698px;
+  top: 1731px;
+  font-family: 'Oswald';
+  font-style: bold;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* Poga Pieteikt Sapni */
+.buttonSend{
+  position: absolute;
+  width: 182px;
+  height: 62px;
+  left: 592px;
+  top: 2615px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.0em;
+  background: url("../img/Send.png");
+  color: #FFFFFF;
+}
+/* SAZINĀTIES AR MUMS */
+.txtSazinaties{
+  position: absolute;
+  width: 819px;
+  height: 48px;
+  left: 274px;
+  top: 2011px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* Your Name */
+.formName{
+  position: absolute;
+  width: 296px;
+  height: 43px;
+  left: 377px;
+  top: 2113px;
+  padding: 12px 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  letter-spacing: -0.015em;
+  border: none;
+  color: #2F4858;
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 6px;
+}
+/* Jautājums, vai komentārs* */
+.formJaut{
+  position: absolute;
+  width: 612px;
+  height: 232px;
+  left: 377px;
+  top: 2229px;
+  padding: 10px 12px 10px 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  border: none;
+  color: #2F4858;
+  text-align: top;
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 6px;
+  padding-bottom: 200px;
+}
+/* Telefons* */
+.formEmail{
+  position: absolute;
+  width: 296px;
+  height: 43px;
+  left: 693px;
+  top: 2113px;
+  padding: 12px 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  letter-spacing: -0.015em;
+  border: none;
+  color: #2F4858;
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 6px;
+}
+/* Your Email */
+.formPhone{
+  position: absolute;
+  width: 612px;
+  height: 43px;
+  left: 377px;
+  top: 2171px;
+  padding: 12px 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #2F4858;
+  border: none;
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 6px;
+}
+/* ripped 6 11 */
+.imgRipped611{
+  position: absolute;
+  width: 1366px;
+  height: 55px;
+  left: 0px;
+  top: 3458px;
+}
+.checkmark{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 380px;
+  top: 2526px;
+}
+.checkmark input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Checkbox */
+.checkboxAgree{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 380px;
+  top: 2529px;
+  border: none;
+  background: #E7E7E7;
+  border-radius: 3px;
+}
+/* Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams. */
+.txtAgree{
+  position: absolute;
+  width: 572px;
+  height: 39px;
+  left: 417px;
+  top: 2526px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* * obligāti aizpildāmie lauki */
+.txtMandatory{
+  position: absolute;
+  width: 612px;
+  height: 25px;
+  left: 377px;
+  top: 2476px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* Alina_1 1 */
+.imgAlina11{
+  position: absolute;
+  width: 298px;
+  height: 184px;
+  left: 662px;
+  top: 1382px;
+}
+/* Zanda_1 */
+.imgZanda{
+  position: absolute;
+  width: 328px;
+  height: 355px;
+  left: 0px;
+  top: 1197px;
+}
+/* Sibilla_4 */
+.imgSibilla{
+  position: absolute;
+  width: 334px;
+  height: 364px;
+  left: 328px;
+  top: 1202px;
+}
+/* Brinuma_meita-15 */
+.imgBrinuma{
+  position: absolute;
+  width: 298px;
+  height: 180px;
+  left: 662px;
+  top: 1202px;
+}
+/* Anda_2 1 */
+.imgAnda_21{
+  position: absolute;
+  width: 406px;
+  height: 383px;
+  left: 960px;
+  top: 1183px;
+}
+/* ripped 6 7 */
+.imgRipped67{
+  position: absolute;
+  width: 1366px;
+  height: 55px;
+  left: 0px;
+  top: 1183px;
+  transform: rotate(-180deg);
+}
+/* ripped 6 8 */
+.imgRipped68{
+  position: absolute;
+  width: 1366px;
+  height: 55px;
+  left: 0px;
+  top: 1526px;
+}
+/* Group 9 */
+.suppGroup{
+  position: absolute;
+  width: 1366px;
+  height: 481.59px;
+  left: 0px;
+  top: 2827px;
+}
+/* ATBALSTĪTĀJI */
+.txtSupporters{
+  position: absolute;
+  width: 394px;
+  height: 29px;
+  left: 486px;
+  top: 2927px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+/* getlogo 1 */
+.getlogo{
+  position: absolute;
+  width: 241.95px;
+  height: 80px;
+  left: 168px;
+  top: 3045px;
+}
+/* sem_logo-2 1 */
+.sem{
+  position: absolute;
+  width: 209.32px;
+  height: 80px;
+  left: 495px;
+  top: 3045px;
+}
+/* Citybee-logo 1 */
+.citybee{
+  position: absolute;
+  width: 238.96px;
+  height: 80px;
+  left: 789px;
+  top: 3045px;
+}
+/* logo1 1 */
+.logo1{
+  position: absolute;
+  width: 84.77px;
+  height: 120px;
+  left: 1113px;
+  top: 3026px;
+}
+/* SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm. */
+.txtAbout{
+  position: absolute;
+  width: 654px;
+  height: 114px;
+  left: 359px;
+  top: 919px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.0em;
+  color: #2F4858;
+}
+.footerRip{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 84.22%;
+  background: #2F4858;
+}
+/* footer */
+.footer{
+  position: absolute;
+  width: 1366px;
+  height: 376px;
+  left: 0px;
+  top: 3275px;
+  background: #2F4858;
+}
+/* GoldenV2Logo 3 */
+.goldenLogo{
+  position: absolute;
+  left: 4.54%;
+  right: 82.14%;
+  top: 19.41%;
+  bottom: 32.18%;
+}
+/* Ideja */
+.footerIdea{
+  position: absolute;
+  left: 28.11%;
+  right: 66.91%;
+  top: 18.88%;
+  bottom: 74.73%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Piesaki Sapni */
+.footerDream{
+  position: absolute;
+  left: 27.89%;
+  right: 58.78%;
+  top: 30.85%;
+  bottom: 62.77%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Uzņēmējiem */
+.footerEntrepreneurs{
+  position: absolute;
+  left: 27.89%;
+  right: 59%;
+  top: 42.82%;
+  bottom: 50.8%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Biedrība SparkleHeart */
+.footerCommunity{
+  position: absolute;
+  left: 47%;
+  right: 31.99%;
+  top: 18.62%;
+  bottom: 75%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Sapņu banka */
+.footerDreamBank{
+  position: absolute;
+  left: 27.89%;
+  right: 63.1%;
+  top: 53.72%;
+  bottom: 34.31%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Reģistrācijas nr. 40008293119 */
+.footerRegister{
+  position: absolute;
+  left: 47%;
+  right: 32.58%;
+  top: 30.85%;
+  bottom: 62.77%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* LV52HABA0551047652465 */
+.footerBankNum{
+  position: absolute;
+  left: 47%;
+  right: 32.58%;
+  top: 48.4%;
+  bottom: 46.54%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Banka: SWEDBANK A/S */
+.footerBank{
+  position: absolute;
+  left: 47%;
+  right: 32.58%;
+  top: 39.89%;
+  bottom: 53.99%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Juris Gogulis */
+.footerName{
+  position: absolute;
+  left: 81.99%;
+  right: 4.69%;
+  top: 18.88%;
+  bottom: 69.15%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: right;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* juris.gogulis@sparkleheart.org */
+.footerEmail{
+  position: absolute;
+  left: 66.47%;
+  right: 4.69%;
+  top: 30.85%;
+  bottom: 62.77%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  align-items: center;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* +37126890034 */
+.footerPhone{
+  position: absolute;
+  left: 81.99%;
+  right: 4.69%;
+  top: 39.89%;
+  bottom: 54.52%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Biķernieku iela 24a - 5, LV-1006 */
+.footerAddress{
+  position: absolute;
+  left: 72.25%;
+  right: 4.69%;
+  top: 48.14%;
+  bottom: 46.01%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+ /* identical to box height */
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Sapņus atbalsta */
+.footerDreamSup{
+  position: absolute;
+  left: 27.89%;
+  right: 59%;
+  top: 65.43%;
+  bottom: 22.61%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Iedvesmas stāsti */
+.footerInspire{
+  position: absolute;
+  left: 27.89%;
+  right: 59%;
+  top: 77.39%;
+  bottom: 14.89%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Privātuma politika */
+.footerPrivacy{
+  position: absolute;
+  left: 81.55%;
+  right: 4.54%;
+  top: 90.96%;
+  bottom: 5.32%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* © SparkleHeart 2020. Visas tiesības aizsargātas. */
+.footerCopyright{
+  position: absolute;
+  left: 4.54%;
+  right: 82.14%;
+  top: 86.44%;
+  bottom: 3.46%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0em;
+  color: #FFFFFF;
+}
+/* Facebook */
+.facebook{
+  position: absolute;
+  left: 89.39%;
+  right: 9.3%;
+  top: 67.82%;
+  bottom: 22.61%;
+}
+/* Instagram */
+.instagram{
+  position: absolute;
+  left: 92.83%;
+  right: 4.54%;
+  top: 67.82%;
+  bottom: 22.61%;
+}
